@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>speciality</title>
+</head>
+<body>
+    <table>
+        <thead>
+        <tr>
+            <th>Speciality_id</th>
+            <th>Speciality_name</th>
+            <th>Speciality_shifr</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for row in output_data %}
+                <tr>
+                    <td>{{row[0]}}</td>
+                    <td>{{row[1]}}</td>
+                    <td>{{row[2]}}</td>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

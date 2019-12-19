@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>violation</title>
+</head>
+<body>
+    <table>
+        <thead>
+        <tr>
+            <th>Violation_id</th>
+            <th>Violation_kind_id</th>
+            <th>Punish_kind_id</th>
+            <th>Violation_date</th>
+            <th>Person_id</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for row in output_data %}
+                <tr>
+                    <td>{{row[0]}}</td>
+                    <td>{{row[1]}}</td>
+                    <td>{{row[2]}}</td>
+                    <td>{{row[3]}}</td>
+                    <td>{{row[4]}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
