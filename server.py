@@ -54,10 +54,11 @@ def show_all_table (cursor, table_name):
 def update_row_in_table_by_primary_key(cursor,table_name,row_of_data,prim_key_name,prim_key_value):
     cursor.execute("UPDATE {0} SET {1} where {2} = {3}".format(table_name,row_of_data,prim_key_name,prim_key_value))
 
-# cist_db = mysql.connector.connect(user='dbuser', password='dbuser_1234',host='localhost',database='Cist')
+# cist_db = mysql.connector.connect(user='root', password='root_1234',host='34.77.196.83',database='Cist')
 # cursor = cist_db.cursor()
-#
-# #update_row_in_table_by_primary_key(cursor,"sviolation_kind", "violation_kind_name = 'Некорректна поведінка'", "violation_kind_id","8")
+# cursor.execute("show tables")
+# print(cursor.fetchall())
+# update_row_in_table_by_primary_key(cursor,"sviolation_kind", "violation_kind_name = 'Некорректна поведінка'", "violation_kind_id","8")
 # #print(show_all_table (cursor, "sviolation_kind"))
 # #insert_row_into_table(cursor, "smark","(70,14)")
 #
@@ -69,5 +70,5 @@ def update_row_in_table_by_primary_key(cursor,table_name,row_of_data,prim_key_na
 #
 #
 # print("bye")
-# #cist_db.commit()
+# cist_db.commit()
 # cist_db.close()
